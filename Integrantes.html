@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integrantes</title>
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a id="inicio-link" href="html.html" class="notranslate" translate="no"
+        >Início</a
+      >
+      <a href="Grupos.html" class="notranslate" translate="no">Grupos</a>
+      <a href="Integrantes.html" class="notranslate" translate="no"
+        >Integrantes</a
+      >
+      <a href="Itens.html" class="notranslate" translate="no">Itens</a>
+    </div>
+    <main>
+      <h1 class="center" style="color: #f0f0f0">Integrantes</h1>
+      <section id="integrantes-section">
+        <!-- dynamically filled -->
+      </section>
+
+      <!-- modal for editing integrante details -->
+      <div id="integrante-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+          <h2 style="color: #f0f0f0; margin-top: 0">Detalhes do Integrante</h2>
+          <div
+            id="modal-image-container"
+            style="text-align: center; margin-bottom: 1rem"
+          ></div>
+          <p><strong>Nome:</strong> <span id="modal-name"></span></p>
+          <p><strong>Grupo:</strong> <span id="modal-group"></span></p>
+          <label style="color: #eee">Descrição:</label>
+          <textarea id="modal-desc" class="modal-input" rows="10"></textarea>
+          <label style="color: #eee; display: block; margin-top: 1rem"
+            >Link:</label
+          >
+          <input
+            id="modal-link"
+            type="url"
+            class="modal-input"
+            placeholder="https://"
+          />
+          <div class="modal-buttons">
+            <button id="modal-save" class="modal-btn-save">Salvar</button>
+            <button id="modal-cancel" class="modal-btn-cancel">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

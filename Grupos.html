@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupos</title>
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a id="inicio-link" href="html.html" class="notranslate" translate="no"
+        >Início</a
+      >
+      <a href="Grupos.html" class="notranslate" translate="no">Grupos</a>
+      <a href="Integrantes.html" class="notranslate" translate="no"
+        >Integrantes</a
+      >
+      <a href="Itens.html" class="notranslate" translate="no">Itens</a>
+    </div>
+    <main>
+      <h1 class="center" style="color: #f0f0f0">Grupos</h1>
+      <section id="grupos-section">
+        <button id="add-grupo-btn" class="add-grupo-btn">
+          ➕ Adicionar Grupos
+        </button>
+        <div id="grupos-container"></div>
+      </section>
+    </main>
+
+    <!-- Modal for creating groups -->
+    <div id="grupo-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <h2 style="color: #f0f0f0; margin-top: 0">Novo Grupo</h2>
+
+        <label style="color: #eee">Nome do Grupo:</label>
+        <input
+          type="text"
+          id="grupo-name"
+          class="modal-input"
+          placeholder="Digite o nome do grupo"
+        />
+
+        <div style="margin-top: 1rem; margin-bottom: 1rem">
+          <button id="add-member-btn" class="modal-btn-secondary">
+            Adicionar Integrantes
+          </button>
+        </div>
+
+        <div
+          id="members-list"
+          style="margin-bottom: 1rem; max-height: 200px; overflow-y: auto"
+        ></div>
+
+        <div class="modal-buttons">
+          <button id="save-grupo-btn" class="modal-btn-save">Salvar</button>
+          <button id="cancel-grupo-btn" class="modal-btn-cancel">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
